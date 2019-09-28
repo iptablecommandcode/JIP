@@ -17,6 +17,9 @@
             body {
                 background-color: #e0cdaf;
             }
+            .place{
+                background-color: #77543e;
+            }
         </style>
     </head>
 
@@ -49,32 +52,79 @@
                 <div class="collapse navbar-collapse" id="login">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Sign In <span class="sr-only"></span></a>
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="#">Link</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
         <!--TOP navbar END-->
+        <!--City start-->
+        <div class="mt-5">
+            <div class="text-center">
+                <button type="submit" class="btn place col-4 text-light">
+                    서울
+                </button>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    경기도
+                </button>
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    강원도
+                </button>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    충청북도
+                </button>
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    경상북도
+                </button>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    충청남도
+                </button>
+                <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">
+                    경상남도
+                </button>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn col-4 place m-3 text-light">
+                    전라북도
+                </button>
+                <button type="submit" class="btn col-4 place m-3 text-light">
+                    전라남도
+                </button>
+            </div>
+        </div>
+        <!--City end-->
         <!--FOOTER MENU START-->
         <footer>
-            <nav class="row navbar fixed-bottom justify-content-around bg-light">
+            <div class="row bg-light justify-content-around">
+            <nav class="navbar">
                 <button class="navbar-toggler" type="button">
                     <span class="fas fa-home"></span><br>
                     <span>home</span>
                 </button>
+            </nav>
+            <nav class="navbar">
                 <button class="navbar-toggler" type="button">
                     <span class="far fa-list-alt"></span><br>
                     <span>예약</span>
                 </button>
+            </nav>
+            <nav class="navbar">
                 <button class="navbar-toggler" type="button">
                     <span class="fas fa-users"></span><br>
                     <span>커뮤니티</span>
                 </button>
             </nav>
+        </div>
         </footer>
         <!--FOOTER MENU END-->
     </body>
