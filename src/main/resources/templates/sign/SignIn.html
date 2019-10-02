@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
+<th:block layout:fragment="layout.frame">
+    <!--rcenter padding-->
+    <div class="container mt-5">
+        <!--login form start-->
+        <form action="POST" th:action="@{/mypage/MyPage}">
+            <div class="row justify-content-center mb-3">
+                <!--ID-->
+                <div class="input-group flex-nowrap col-lg-7 col-md-7">
+                    <input type="text" name="ID" class="form-control text-center" placeholder="아이디">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <!--PW-->
+                <div class="input-group flex-nowrap col-lg-7 col-md-7">
+                    <input type="password" name="PWD" class="form-control text-center" placeholder="비밀번호">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <!--Sign In button-->
+                <div class="input-group flex-nowrap col-lg-5 col-md-5">
+                    <button class="btn col-12 text-light login" type="submit">로그인</button>
+                </div>
+            </div>
+        </form>
+        <!--login form end-->
+        <div class="row justify-content-center mb-3">
+            <!--naver-->
+            <div class="input-group flex-nowrap col-lg-6 col-md-6">
+                <button class="btn col-12 text-light naver" type="submit">네이버 아이디로 로그인</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!--kakao-->
+            <div class="input-group flex-nowrap col-lg-6 col-md-6">
+                <button class="btn col-12 kakao" type="submit">네이버 아이디로 로그인</button>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+</html>

@@ -14,8 +14,18 @@
         <!--title-->
         <title></title>
         <style>
-            body {
+            body{
                 background-color: #e0cdaf;
+            }
+            .login{
+                background-color: #412e34;
+            }
+            .naver{
+                background-color: #1dc400;
+            }
+            .kakao{
+                background-color: #ffdd00;
+                text-decoration-color: #412e34;
             }
         </style>
     </head>
@@ -49,10 +59,10 @@
                 <div class="collapse navbar-collapse" id="login">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Sign In <span class="sr-only"></span></a>
+                            <a class="nav-link" href="../sign/SignIn.html" th:href=@{/sign/SignIn}>Sign In <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="../sign/SignUp.html"  th:href=@{/sign/SignUp}>Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -66,18 +76,24 @@
         <!--FOOTER MENU START-->
         <footer>
             <nav class="row navbar fixed-bottom justify-content-around bg-light">
-                <button class="navbar-toggler" type="button">
-                    <span class="fas fa-home"></span><br>
-                    <span>home</span>
-                </button>
-                <button class="navbar-toggler" type="button">
-                    <span class="far fa-list-alt"></span><br>
-                    <span>예약</span>
-                </button>
-                <button class="navbar-toggler" type="button">
-                    <span class="fas fa-users"></span><br>
-                    <span>커뮤니티</span>
-                </button>
+                <form method="GET" th:action="@{/index}">
+                    <button class="navbar-toggler" type="button">
+                        <span class="fas fa-home"></span><br>
+                        <span>home</span>
+                    </button>
+                </form>
+                <form method="GET">
+                    <button class="navbar-toggler" type="button">
+                        <span class="far fa-list-alt"></span><br>
+                        <span>예약</span>
+                    </button>
+                </form>
+                <form method="GET">
+                    <button class="navbar-toggler" type="button" name>
+                        <span class="fas fa-users"></span><br>
+                        <span>커뮤니티</span>
+                    </button>
+                </form>
             </nav>
         </footer>
         <!--FOOTER MENU END-->

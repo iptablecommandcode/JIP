@@ -3,6 +3,8 @@ values(10001,'Ranga', 'E1234567');
 insert into student
 values(10002,'Ravi', 'A1234568');
 
+insert into ACCOUNT
+values('test','1234','test@test.com',01012341234,0212341234,'abcd','address','dog',1,'doggy','gold',0,2019,10,08,'hospital');
 -- 그룹/조직/부서 구조도
 insert into CIP_ORGANIZATION 
 (ORGANIZATION_SEQ,NAME,TELEPHONE,ORDER_NUMBER,PARENT_ORGANIZATION_SEQ) 
