@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
+    <th:block layout:fragment="layout.frame">
+        <div>
+            <div class="location text-secondary mb-2">
+                <!--location-->
+                <span>test</span>
+            </div>
+            <div class="row bg-light">
+                <!--image time-->
+                <div>
+                    <img src="../image/test.png" class="m-2">
+                </div>
+                <div class="m-3">
+                    <!--time-->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>바우미우 동물병원</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>평일 09:00~21:00</td>
+                            </tr>
+                            <tr>
+                                <td>토요일 09:00~18:00</td>
+                            </tr>
+                            <tr>
+                                <td>공휴일 10:00~18:00</td>
+                            </tr>
+                            <tr>
+                                <td>02-2337-3366</td>
+                                <!--telephone icon-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</html>
