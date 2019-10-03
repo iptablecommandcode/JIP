@@ -50,12 +50,14 @@
                 </div>
             </nav>
             <!--title-->
-            <a class="navbar-brand  content-center" href="#">Navbar</a>
+            <a class="navbar-brand  content-center" href="../index" th:href=@{/index}>Navbar</a>
             <!--Right Menu-->
+            <form method="POST">
             <nav class="navbar navbar-light bg-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#login" aria-controls="login">
                     <span class="far fa-user"></span>
                 </button>
+                <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
                 <div class="collapse navbar-collapse" id="login">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -67,6 +69,7 @@
                     </ul>
                 </div>
             </nav>
+        </form>
         </div>
         <!--TOP navbar END-->
 

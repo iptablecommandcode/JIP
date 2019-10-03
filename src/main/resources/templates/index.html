@@ -14,8 +14,12 @@
                     <div class="m-5">
                         <!--imformation-->
                         <table>
+                            <form method="POST" th:action="@{/index}">
+                                <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                                <input type="hidden" name="ID" th:value="${idChk.ID}">
+                            </form>
                             <tr>
-                                <td>로그인 해주십시오</td>
+                                <td>로그인해 주십시오</td>
                                 <!--Birthday-->
                                 <td></td>
                             </tr>

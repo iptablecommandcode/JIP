@@ -3,7 +3,8 @@
     <!--rcenter padding-->
     <div class="container mt-5">
         <!--login form start-->
-        <form action="POST" th:action="@{/mypage/MyPage}">
+        <form method="POST" th:action="@{/index}">
+            <input type="hidden" name="flag" th:value="${flag.flag}">
             <div class="row justify-content-center mb-3">
                 <!--ID-->
                 <div class="input-group flex-nowrap col-lg-7 col-md-7">
@@ -19,7 +20,7 @@
             <div class="row justify-content-center mb-3">
                 <!--Sign In button-->
                 <div class="input-group flex-nowrap col-lg-5 col-md-5">
-                    <button class="btn col-12 text-light login" type="submit">로그인</button>
+                    <button class="btn col-12 text-light login" type="submit" name="submit" value="SignIn">로그인</button>
                 </div>
             </div>
         </form>
