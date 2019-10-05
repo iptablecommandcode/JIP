@@ -26,7 +26,7 @@ CREATE TABLE ACCOUNT
 (
     ID            VARCHAR2(20)    NOT NULL, 
     PWD           VARCHAR2(20)    NOT NULL, 
-    EMAIL         VARCHAR2(20)    NOT NULL, 
+    EMAIL         VARCHAR2(20)    NULL, 
     TEL1          INT            NULL, 
     TEL2          INT            NULL, 
     TEL3          INT            NULL, 

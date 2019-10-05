@@ -9,5 +9,30 @@
 	    select * from ACCOUNT
 		where ID = #{ID};
     </select>
-
+    <insert id="ADD" parameterType="Map">
+	    INSERT INTO ACCOUNT (
+			NAME
+			, ID
+			, PWD
+			, TEL1
+			, TEL2
+            , TEL3
+            , DAYYEAR
+            , DAYMONTH
+            , DAYDAY
+            , EMAIL
+		)
+		values(
+			#{NAME}
+			, #{ID}
+			, #{PWD}
+			, #{TEL1}
+			, #{TEL2}
+            , #{TEL3}
+            , #{DAYYEAR}
+            , #{DAYMONTH}
+            , #{DAYDAY}
+            , #{EMAIL}
+		)
+	</insert>
 </mapper>

@@ -3,6 +3,9 @@ package com.example.learn_springboot.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.learn_springboot.service.MemberService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SignController {
+    @Autowired
+    private MemberService service;
 
     @RequestMapping(value = "/sign/{action}", method = { RequestMethod.GET, RequestMethod.POST })
     public ModelAndView actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
@@ -30,6 +35,9 @@ public class SignController {
         }
 
         if("SignIn".equals(action)){//SignIn page
+            if(paramMap.get("ID") != null){
+                service.saveObject(paramMap);
+            }
             resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
             resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
             resultMap.put("SignOut", "");
