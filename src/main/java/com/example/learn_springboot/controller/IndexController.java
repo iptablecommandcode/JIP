@@ -44,6 +44,14 @@ public class IndexController {
 						resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
 						resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
 						resultMap.put("SignOut", "");
+
+						resultMap.put("Nickname1","로그인해 주십시오");//pet title
+						resultMap.put("Rank1","");
+						resultMap.put("Mileage1","");
+
+						resultMap.put("NICKNAME","");//main
+						resultMap.put("RANK","");
+						resultMap.put("MILEAGE","");
 					} else {
 						//로그인 디비 체크
 						resultDB = service.getMember(paramMap);
@@ -67,6 +75,10 @@ public class IndexController {
 						}
 
 						if(DBID.equals(idChk) && DBPW.equals(pwChk)){//ID PW CHK
+							resultMap.put("Nickname1","<h3>닉네임</h3>");//title
+							resultMap.put("Rank1","<h3>등급</h3>");
+							resultMap.put("Mileage1","<h3>마일리지</h3>");
+
 							resultMap.put("SignOut", "<a class='nav-link' href='../sign/SignOut' th:href='@{/sign/SignOut}'>Sign Out</a>");//sign Out button
 							resultMap.put("SignUp","");
 							resultMap.put("SignIn", "");
@@ -75,6 +87,13 @@ public class IndexController {
 						} else {
 						//로그인 실패시
 						flagMap.put("flag", false);
+						resultMap.put("Nickname1","로그인해 주십시오");//title
+						resultMap.put("Rank1","");
+						resultMap.put("Mileage1","");
+
+						resultMap.put("NICKNAME","");//main
+						resultMap.put("RANK","");
+						resultMap.put("MILEAGE","");
 						resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In</a>");//SignIn/Up Button
 						resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
 						resultMap.put("SignOut", "");

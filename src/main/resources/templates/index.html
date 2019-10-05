@@ -9,32 +9,23 @@
                     <span class="fas fa-pencil-alt"></span>
                 </div>
                 <div class="row">
-                    <div class="ml-3"><img src="../image/test.png" class="ml-3"></div>
-                    <!--Pet image-->
-                    <div class="m-5">
+                    <div class="ml-3 col-4"><img src="../image/test.png" class="ml-3"></div><!--Pet image-->
+                    <div class="m-5 row col-5">
                         <!--imformation-->
-                        <table>
-                            <form method="POST" th:action="@{/index}">
-                                <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
-                                <input type="hidden" name="ID" th:value="${idChk.ID}">
-                            </form>
-                            <tr>
-                                <td>로그인해 주십시오</td>
-                                <!--Birthday-->
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <!--species-->
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <!--calendar day-->
-                                <td></td>
-                                <!--calendar info-->
-                            </tr>
-                        </table>
+                        <form method="POST" th:action="@{/index}">
+                            <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                            <input type="hidden" name="ID" th:value="${idChk.ID}">
+                        </form>
+                        <div>
+                            <span th:utext="${resultMap.Nickname1}"></span><!--nickname-->
+                            <span th:utext="${resultMap.Rank1}"></span>
+                            <span th:utext="${resultMap.Mileage1}"></span>
+                        </div>
+                        <div>
+                            <p class="ml-3 font-weight-bold" th:utext="${resultMap.NICKNAME}"></p>
+                            <p class="ml-3 font-weight-bold text-warning" th:utext="${resultMap.RANK}"></p>
+                            <p class="ml-3 font-weight-bold" th:utext="${resultMap.MILEAGE}"></p>
+                        </div>
                     </div>
                 </div>
             </div>
