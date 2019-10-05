@@ -53,6 +53,15 @@ public class SignController {
             resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
             resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
             resultMap.put("SignOut", "");
+
+            resultMap.put("Nickname1","로그인해 주십시오");//title
+			resultMap.put("Rank1","");
+            resultMap.put("Mileage1","");
+            
+            resultMap.put("NICKNAME","");//main
+            resultMap.put("RANK","");
+            resultMap.put("MILEAGE","");
+            
             viewName = "index";
         }
 
