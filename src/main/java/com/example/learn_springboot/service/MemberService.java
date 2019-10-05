@@ -2,8 +2,8 @@ package com.example.learn_springboot.service;
 
 import java.util.Map;
 
+import com.example.learn_springboot.dao.MemberDao;
 import com.example.learn_springboot.repository.MemberRepository;
-import com.example.learn_springboot.util.MemberDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -27,6 +27,15 @@
                 background-color: #ffdd00;
                 text-decoration-color: #412e34;
             }
+            .Logo{
+                width: 100px;
+            }
+            .footer{
+                width: 50px;
+            }
+            .place{
+                background-color: #77543e;
+            }
         </style>
     </head>
 
@@ -40,17 +49,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="test">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
             <!--title-->
-            <a class="navbar-brand  content-center" href="../index" th:href=@{/index}>Navbar</a>
+            <form method="POST" th:action="@{/index}">
+                <a class="content-center" href="../index.html" th:href=@{/index}>
+                    <img src="../../static/image/Logo.png" class="Logo" th:src="@{/image/Logo.png}">
+                    <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                    <input type="hidden" name="ID" th:value="${idChk.ID}">
+                </a>
+            </form>
             <!--Right Menu-->
             <form method="POST">
             <nav class="navbar navbar-light bg-light">
@@ -88,22 +97,25 @@
         <!--FOOTER MENU START-->
         <footer>
             <nav class="row navbar fixed-bottom justify-content-around bg-light">
-                <form method="GET" th:action="@{/index}">
-                    <button class="navbar-toggler" type="button">
-                        <span class="fas fa-home"></span><br>
-                        <a class='nav-link' href="../index.html" th:href="@{/index}">home</a>
+                <form method="POST" th:action="@{/index}"><!--home-->
+                    <a class="navbar-toggler" href="../index.html" th:href="@{/index}">
+                        <img src="../../static/image/home.png" class="footer" th:src="@{/image/home.png}">
+                        <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                        <input type="hidden" name="ID" th:value="${idChk.ID}">
+                    </a>
+                </form>
+                <form method="POST" th:action="@{/area/City}"><!--Order-->
+                    <button type="submit" class="navbar-toggler">
+                        <img src="../../static/image/Order.png" class="footer" th:src="@{/image/Order.png}">
+                        <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                        <input type="hidden" name="ID" th:value="${idChk.ID}">
                     </button>
                 </form>
-                <form method="GET">
-                    <button class="navbar-toggler" type="button">
-                        <span class="far fa-list-alt"></span><br>
-                        <a class='nav-link' href="../index.html" th:href="@{/index}">예약</a>
-                    </button>
-                </form>
-                <form method="GET">
-                    <button class="navbar-toggler" type="button" name>
-                        <span class="fas fa-users"></span><br>
-                        <a class='nav-link' href="../index.html" th:href="@{/index}">커뮤니티</a>
+                <form method="POST" th:action="@{/index}"><!--Comunity-->
+                    <button class="navbar-toggler" type="submit">
+                        <img src="../../static/image/Comunity.png" class="footer" th:src="@{/image/Comunity.png}">
+                        <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                        <input type="hidden" name="ID" th:value="${idChk.ID}">
                     </button>
                 </form>
             </nav>

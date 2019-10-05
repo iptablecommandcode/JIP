@@ -1,11 +1,19 @@
 <html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
     <th:block layout:fragment="layout.frame">
+        <form method="POST">
+            <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+            <input type="hidden" name="ID" th:value="${idChk.ID}">
+        </form>
         <!--City start-->
         <div class="mt-5">
             <div class="text-center">
-                <button type="submit" class="btn place col-4 text-light">
-                    서울
-                </button>
+                <form method="POST" th:action="@{/area/Office}">
+                    <button type="submit" class="btn place col-4 text-light">
+                        서울
+                    </button>
+                    <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+                    <input type="hidden" name="ID" th:value="${idChk.ID}">
+                </form>
             </div>
             <div class="row justify-content-center">
                 <button type="submit" class="btn col-4 place ml-3 mr-3 mt-3 text-light">

@@ -1,4 +1,4 @@
-package com.example.learn_springboot.util;
+package com.example.learn_springboot.model;
 
 import java.io.Serializable;
 import java.util.Objects;

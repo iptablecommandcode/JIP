@@ -1,11 +1,14 @@
 <html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
     <th:block layout:fragment="layout.frame">
+        <form method="POST">
+            <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
+            <input type="hidden" name="ID" th:value="${idChk.ID}">
+        </form>
         <div>
             <div class="location text-secondary mb-2">
                 <!--location-->
-                <span>test</span>
             </div>
-            <div class="row bg-light">
+            <div class="row bg-light mt-3">
                 <!--image time-->
                 <div>
                     <img src="../image/test.png" class="m-2">
@@ -30,6 +33,66 @@
                             </tr>
                             <tr>
                                 <td>02-2337-3366</td>
+                                <!--telephone icon-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row bg-light mt-3">
+                <!--image time-->
+                <div>
+                    <img src="../image/test.png" class="m-2">
+                </div>
+                <div class="m-3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>좋아요 동물병원</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>평일 10:00~20:00</td>
+                            </tr>
+                            <tr>
+                                <td>토요일 11:00~16:00</td>
+                            </tr>
+                            <tr>
+                                <td>공휴일 12:00~16:00</td>
+                            </tr>
+                            <tr>
+                                <td>02-2233-6675</td>
+                                <!--telephone icon-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row bg-light mt-3">
+                <!--image time-->
+                <div>
+                    <img src="../image/test.png" class="m-2">
+                </div>
+                <div class="m-3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>백슬 동물병원</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>평일 10:00~20:00</td>
+                            </tr>
+                            <tr>
+                                <td>토요일 10:00~16:00</td>
+                            </tr>
+                            <tr>
+                                <td>공휴일 10:00~16:00</td>
+                            </tr>
+                            <tr>
+                                <td>02-2333-3366</td>
                                 <!--telephone icon-->
                             </tr>
                         </tbody>

@@ -30,8 +30,10 @@ public class SignController {
 
         if (paramMap.get("flag") == null){// check sign in
             flagMap.put("flag", false);//without Sign in
+            idMap.put("ID", "");
         } else {
             flagMap.put("flag", paramMap.get("flag"));
+            idMap.put("ID", paramMap.get("ID"));
         }
 
         if("SignIn".equals(action)){//SignIn page
@@ -48,7 +50,7 @@ public class SignController {
             resultMap.put("SignOut", "");
             viewName += action;
         } else if("SignOut".equals(action)){
-            flagMap.put("flag", null);
+            flagMap.put("flag", "");
             idMap.put("ID", "");
             resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
             resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");

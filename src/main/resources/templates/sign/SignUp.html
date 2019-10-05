@@ -5,19 +5,23 @@
             <table class="m-5 col-9">
                 <tr>
                     <td>이름</td>
-                    <td><input class="form-control" type="text" name="NAME" /></td>
+                    <td><input class="form-control" type="text" placeholder="이름" name="NAME" /></td>
                 </tr>
                 <tr class="m-5">
                     <td>아이디</td>
-                    <td><input class="form-control" type="text" name="ID" /></td>
+                    <td><input class="form-control" type="text" placeholder="아이디" name="ID" /></td>
                 </tr>
                 <tr>
                     <td>비밀번호</td>
-                    <td><input class="form-control" type="password" name="PWD" size=16 /></td>
+                    <td><input class="form-control" type="password" placeholder="비밀번호" name="PWD" size=16 /></td>
                 </tr>
                 <tr>
                     <td>비밀번호 확인</td>
-                    <td><input class="form-control" type="password" name="PWC" size=16 /></td>
+                    <td><input class="form-control" type="password" placeholder="비밀번호 확인" name="PWC" size=16 /></td>
+                </tr>
+                <tr>
+                    <td>동물 닉네임</td>
+                    <td><input class="form-control" type="text" name="NICKNAME" placeholder="동물 닉네임 입력"></td>
                 </tr>
                 <tr>
                     <td>휴대폰</td>
@@ -213,7 +217,11 @@
                 </tr>
                 <tr>
                     <td>이메일</td>
-                    <td><input class="form-control" type="EMAIL" name="user_email">
+                    <td>
+                        <input class="form-control" type="EMAIL" name="user_email">
+                        <input class="form-control" type="hidden" name="RANK" value="BRONZE"><!--basic information-->
+                        <input class="form-control" type="hidden" name="MILEAGE" value="0">
+                    </td>
                 </tr>
                 <tr>
                     <td></td>

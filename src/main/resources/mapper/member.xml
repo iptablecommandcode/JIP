@@ -21,6 +21,9 @@
             , DAYMONTH
             , DAYDAY
             , EMAIL
+			, RANK
+			, MILEAGE
+			, NICKNAME
 		)
 		values(
 			#{NAME}
@@ -33,6 +36,9 @@
             , #{DAYMONTH}
             , #{DAYDAY}
             , #{EMAIL}
+			, #{RANK}
+			, #{MILEAGE}
+			, #{NICKNAME}
 		)
 	</insert>
 </mapper>
