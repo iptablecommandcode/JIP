@@ -38,8 +38,12 @@ public class IndexController {
 						flagMap.put("flag", false);
 						if (paramMap.get("ID") == null)
             				idMap.put("ID", "");
-        				else
-            				idMap.put("ID", paramMap.get("ID"));
+        				else{
+							idMap.put("ID", paramMap.get("ID"));
+						}
+						resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
+						resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
+						resultMap.put("SignOut", "");
 					} else {
 						//로그인 디비 체크
 						resultDB = service.getMember(paramMap);
@@ -62,12 +66,18 @@ public class IndexController {
 							}
 						}
 
-						if(DBID.equals(idChk) && DBPW.equals(pwChk)){//아이디 비밀번호 체크
+						if(DBID.equals(idChk) && DBPW.equals(pwChk)){//ID PW CHK
+							resultMap.put("SignOut", "<a class='nav-link' href='../sign/SignOut' th:href='@{/sign/SignOut}'>Sign Out</a>");//sign Out button
+							resultMap.put("SignUp","");
+							resultMap.put("SignIn", "");
 							flagMap.put("flag", true);
 							idMap.put("ID", paramMap.get("ID"));
 						} else {
 						//로그인 실패시
 						flagMap.put("flag", false);
+						resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In</a>");//SignIn/Up Button
+						resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
+						resultMap.put("SignOut", "");
 						viewName = "sign/SignIn";
 						}
 					}

@@ -20,17 +20,38 @@ public class SignController {
         Map<String, Object> resultMap = new HashMap<String, Object>();
         Object resultList = new Object();
         Map<String, Object> flagMap = new HashMap<String, Object>();
-        String viewName = "/sign/SignIn";
+        Map<String, Object> idMap = new HashMap<String, Object>();//ID check
+        String viewName = "/sign/";
 
         if (paramMap.get("flag") == null){// check sign in
-            flagMap.put("flag", false);
+            flagMap.put("flag", false);//without Sign in
         } else {
             flagMap.put("flag", paramMap.get("flag"));
         }
 
+        if("SignIn".equals(action)){//SignIn page
+            resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
+            resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
+            resultMap.put("SignOut", "");
+            viewName += action;
+        } else if("SignUp".equals(action)){//SignUp page
+            resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
+            resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
+            resultMap.put("SignOut", "");
+            viewName += action;
+        } else if("SignOut".equals(action)){
+            flagMap.put("flag", null);
+            idMap.put("ID", "");
+            resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
+            resultMap.put("SignUp", "<a class='nav-link' href='../sign/SignUp' th:href='@{/sign/SignUp}'>Sign Up</a>");
+            resultMap.put("SignOut", "");
+            viewName = "index";
+        }
 
         modelAndView.setViewName(viewName);
         modelAndView.addObject("flag", flagMap);
+        modelAndView.addObject("resultMap", resultMap);
+        modelAndView.addObject("idChk", idMap);
         return modelAndView;
     }
 }
