@@ -24,7 +24,6 @@ public class HospitalController{
         Map<String, Object> resultMap = new HashMap<String, Object>();
         Map<String, Object> flagMap = new HashMap<String, Object>();
         Map<String, Object> idMap = new HashMap<String, Object>();
-        Object resultDB;
 
         String viewName = "/hospital/";
 
