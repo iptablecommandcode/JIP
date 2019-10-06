@@ -1,0 +1,22 @@
+body{
+    background-color: #e0cdaf;
+}
+.login{
+    background-color: #412e34;
+}
+.naver{
+    background-color: #1dc400;
+}
+.kakao{
+    background-color: #ffdd00;
+    text-decoration-color: #412e34;
+}
+.Logo{
+    width: 100px;
+}
+.footer{
+    width: 50px;
+}
+.place{
+    background-color: #77543e;
+}
