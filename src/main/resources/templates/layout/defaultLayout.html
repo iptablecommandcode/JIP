@@ -12,7 +12,7 @@
         <!--icon-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <!--title-->
-        <title></title>
+        <title>JIP</title>
         <style>
             body{
                 background-color: #e0cdaf;
@@ -99,21 +99,21 @@
             <nav class="row navbar fixed-bottom justify-content-around bg-light">
                 <form method="POST" th:action="@{/index}"><!--home-->
                     <a class="navbar-toggler" href="../index.html" th:href="@{/index}">
-                        <img src="../../static/image/home.png" class="footer" th:src="@{/image/home.png}">
+                        <img src="../../static/image/home.jpg" class="footer" th:src="@{/image/home.jpg}">
                         <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
                         <input type="hidden" name="ID" th:value="${idChk.ID}">
                     </a>
                 </form>
                 <form method="POST" th:action="@{/area/City}"><!--Order-->
                     <button type="submit" class="navbar-toggler">
-                        <img src="../../static/image/Order.png" class="footer" th:src="@{/image/Order.png}">
+                        <img src="../../static/image/Order.jpg" class="footer" th:src="@{/image/Order.jpg}">
                         <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
                         <input type="hidden" name="ID" th:value="${idChk.ID}">
                     </button>
                 </form>
                 <form method="POST" th:action="@{/index}"><!--Comunity-->
                     <button class="navbar-toggler" type="submit">
-                        <img src="../../static/image/Comunity.png" class="footer" th:src="@{/image/Comunity.png}">
+                        <img src="../../static/image/Comunity.jpg" class="footer" th:src="@{/image/Comunity.jpg}">
                         <input type="hidden" name="flag" th:value="${flag.flag}"><!--flag-->
                         <input type="hidden" name="ID" th:value="${idChk.ID}">
                     </button>
