@@ -87,6 +87,7 @@ public class IndexController {
 						} else {
 						//로그인 실패시
 						flagMap.put("flag", false);
+						idMap.put("ID", "");
 						resultMap.put("Nickname1","로그인해 주십시오");//title
 						resultMap.put("Rank1","");
 						resultMap.put("Mileage1","");
