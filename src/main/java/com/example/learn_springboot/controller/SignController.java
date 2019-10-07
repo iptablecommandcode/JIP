@@ -23,7 +23,6 @@ public class SignController {
             ModelAndView modelAndView) {
 
         Map<String, Object> resultMap = new HashMap<String, Object>();
-        Object resultList = new Object();
         Map<String, Object> flagMap = new HashMap<String, Object>();
         Map<String, Object> idMap = new HashMap<String, Object>();//ID check
         String viewName = "/sign/";
