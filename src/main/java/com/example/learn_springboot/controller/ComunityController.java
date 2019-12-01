@@ -39,11 +39,11 @@ public class ComunityController{
 					resultMap.put("SignUp","");
 					resultMap.put("SignIn", "");
                 }
-                if("comunity".equals(action)){
+                if("comunity".equals(action)){//comunity page
                     viewName += "comunity";
                 }
 
-                modelAndView.setViewName(viewName);
+                modelAndView.setViewName(viewName);//return data
                 modelAndView.addObject("paramMap", paramMap);
                 modelAndView.addObject("resultMap", resultMap);
                 modelAndView.addObject("flag", flagMap);

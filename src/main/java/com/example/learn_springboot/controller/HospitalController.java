@@ -51,7 +51,7 @@ public class HospitalController{
             viewName += "info";
         }
 
-        modelAndView.setViewName(viewName);
+        modelAndView.setViewName(viewName);//return data
         modelAndView.addObject("paramMap", paramMap);
 		modelAndView.addObject("resultMap", resultMap);
 		modelAndView.addObject("flag", flagMap);

@@ -33,7 +33,7 @@ public class IndexController {
 				Map<String, Object> idMap = new HashMap<String, Object>();//ID check
         		String viewName = action;
 
-				if("index".equals(action)){
+				if("index".equals(action)){//index default page
 					if (paramMap.get("flag") == null){
 						flagMap.put("flag", false);
 						if (paramMap.get("ID") == null)
@@ -53,14 +53,14 @@ public class IndexController {
 						resultMap.put("RANK","");
 						resultMap.put("MILEAGE","");
 					} else {
-						//로그인 디비 체크
+						//login DB check
 						resultDB = service.getMember(paramMap);
 						resultMap = (Map<String, Object>) resultDB;
 
 						idChk = (String) paramMap.get("ID");
 						pwChk = (String) paramMap.get("PWD");
 
-						if(resultMap != null){//디비정보 아이디
+						if(resultMap != null){//DB information ID
 							if (resultMap.get("ID") == null) {
 								DBID = "";
 							} else {
@@ -85,7 +85,7 @@ public class IndexController {
 							flagMap.put("flag", true);
 							idMap.put("ID", paramMap.get("ID"));
 						} else {
-						//로그인 실패시
+						//login fail
 						flagMap.put("flag", false);
 						idMap.put("ID", "");
 						resultMap.put("Nickname1","로그인해 주십시오");//title
@@ -103,7 +103,7 @@ public class IndexController {
 					}
 				}
 
-				modelAndView.setViewName(viewName);
+				modelAndView.setViewName(viewName);//return data
 				modelAndView.addObject("paramMap", paramMap);
         		modelAndView.addObject("resultMap", resultMap);
 				modelAndView.addObject("flag", flagMap);

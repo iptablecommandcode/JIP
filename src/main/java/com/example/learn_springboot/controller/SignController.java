@@ -66,7 +66,7 @@ public class SignController {
             viewName = "index";
         }
 
-        modelAndView.setViewName(viewName);
+        modelAndView.setViewName(viewName);//return data
         modelAndView.addObject("flag", flagMap);
         modelAndView.addObject("resultMap", resultMap);
         modelAndView.addObject("idChk", idMap);

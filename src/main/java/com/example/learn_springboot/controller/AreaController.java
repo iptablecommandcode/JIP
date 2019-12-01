@@ -21,7 +21,7 @@ public class AreaController {
         Map<String, Object> idMap = new HashMap<String, Object>();
         String viewName = "/area/";
 
-	    if (paramMap.get("flag") != null) {
+	    if (paramMap.get("flag") != null) {//status signin
             resultMap.put("SignIn", "");// SignIn/Up            
 			resultMap.put("SignUp", "");
 			resultMap.put("SignOut", "<a class='nav-link' href='../sign/SignOut' th:href='@{/sign/SignOut}'>Sign Out</a>");
@@ -31,7 +31,7 @@ public class AreaController {
                 flagMap.put("flag", paramMap.get("flag"));
 		        idMap.put("ID", paramMap.get("ID"));
             }
-        } else {
+        } else {//status sign out
             flagMap.put("flag", false);
             idMap.put("ID", null);
             resultMap.put("SignIn", "<a class='nav-link' href='../sign/SignIn' th:href='@{/sign/SignIn}'>Sign In <span class='sr-only'></span></a>");//SignIn/Up Button
@@ -46,7 +46,7 @@ public class AreaController {
 			resultMap.put("MILEAGE", "");
             viewName = "index";
         }
-        if("City".equals(action)){
+        if("City".equals(action)){//area page
             if(paramMap.get("ID").equals(null)){
                 viewName = "index";
             }
@@ -56,7 +56,7 @@ public class AreaController {
             viewName += "Office";
         }
 
-        modelAndView.setViewName(viewName);
+        modelAndView.setViewName(viewName);//return data
         modelAndView.addObject("resultMap", resultMap);
         modelAndView.addObject("paramMap", paramMap);
         modelAndView.addObject("flag", flagMap);
